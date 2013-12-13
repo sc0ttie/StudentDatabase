@@ -10,26 +10,27 @@ using std::cout;
 using std::endl;
 using std::istream;
 using std::ostream;
+using std::sort;
 using std::string;
 using std::vector;
 
 void Database::Add(Student s) {
 	students_.push_back(s);
 
-	std::sort(students_.begin(), students_.end());
+	sort(students_.begin(), students_.end());
 }
 
 void Database::Add(vector<Student> vs) {
 	students_.insert(students_.end(), vs.begin(), vs.end());
 
-	std::sort(students_.begin(), students_.end());
+	sort(students_.begin(), students_.end());
 }
 
 vector<Student> Database::Search(const string& name) const {
 	vector<Student> res;
 
 	for (auto s : students_) {
-		if (s == name) {
+		if (s.Name() == name) {
 			res.push_back(Student(s));
 		}
 	}

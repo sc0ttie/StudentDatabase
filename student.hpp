@@ -9,7 +9,7 @@ class Student {
 public:
 	static const size_t NUM_SCORES = 3;
 
-	bool operator== (const std::string& name) const;
+	std::string Name() const;
 
 	friend bool operator< (const Student& lhs, const Student& rhs);
 	friend std::ostream& operator<< (std::ostream& os, const Student& s);
@@ -18,7 +18,7 @@ public:
 private:
 	std::string name_;
 	char gender_;
-	unsigned age_;
+	size_t age_;
 	int scores_[NUM_SCORES];
 };
 

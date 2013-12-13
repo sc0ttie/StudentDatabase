@@ -10,8 +10,8 @@ using std::istream;
 using std::ostream;
 using std::string;
 
-bool Student::operator== (const string& name) const {
-	return name_ == name;
+string Student::Name() const {
+	return name_;
 }
 
 bool operator< (const Student& lhs, const Student& rhs) {
