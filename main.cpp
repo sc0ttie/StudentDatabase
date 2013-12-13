@@ -9,12 +9,14 @@ using std::cin;
 using std::cout;
 using std::endl;
 using std::ifstream;
-using std::ofstream;
 using std::istream;
+using std::ofstream;
+using std::string;
+using std::vector;
 
 enum class TMenuOpt { ADD = 1, SHOWALL, SEARCH, OUTPUT_TO_FILE, INPUT_FROM_FILE, EXIT };
 
-istream& operator>>(istream& is, TMenuOpt& o) {
+istream& operator>> (istream& is, TMenuOpt& o) {
 	int tmp;
 
 	if (is >> tmp) {

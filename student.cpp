@@ -8,6 +8,7 @@ using std::cout;
 using std::endl;
 using std::istream;
 using std::ostream;
+using std::string;
 
 bool Student::operator== (const string& name) const {
 	return name_ == name;

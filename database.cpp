@@ -10,6 +10,7 @@ using std::cout;
 using std::endl;
 using std::istream;
 using std::ostream;
+using std::string;
 using std::vector;
 
 void Database::Add(Student s) {
